@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../common/head'); %>
+	</head>
+	<body class="container">
+		<header><%- include('../common/header'); %></header>
+
+		<main style="margin-bottom: 100; margin-left: 10%">
+			<div style="margin: 30px 20px 100px" class="row">
+				<div style="margin-top: 30px" class="col-md-4">
+					<div class="card" style="width: 50rem; text-align: center">
+						<img src="<%=product.image%>" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title"><%= product.title %></h5>
+							<p class="card-text"><%= product.description %></p>
+							<h6>RS: <%= product.price %></h6>
+							<form action="/stripe" method="POST">
+								<button type="submit" class="btn btn-primary">Buy now</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer
+			style="
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				background-color: #efefef;
+				color: #fff;
+				text-align: center;
+			"
+		>
+			<%- include('../common/footer'); %>
+		</footer>
+	</body>
+</html>
