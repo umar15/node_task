@@ -8,10 +8,24 @@
 		<title>Completed</title>
 	</head>
 	<body class="">
+		<header style="background-color: #efefef"><%- include('../common/header'); %></header>
 		<div class="flex flex-col items-center mt-32 text-2xl">
 			<p>Forgot to add something to your cart?</p>
 			<p>Shop around then come back to pay!</p>
-			<a href="/"><button class="bg-blue-700 rounded p-2 mt-3">Return</button></a>
+			<a href="/"><button style="color: white" class="bg-blue-500 rounded p-2 mt-3">Return</button></a>
 		</div>
+		<footer
+			style="
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				background-color: #efefef;
+				color: #000;
+				text-align: center;
+			"
+		>
+			<%- include('../common/footer'); %>
+		</footer>
 	</body>
 </html>
